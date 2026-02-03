@@ -1,0 +1,20 @@
+:root{
+  --bg: #ffffff;
+  --text: #1E1E1E;
+  --muted: #B9B4BB;
+
+  --primary: #A50A7E;
+  --primary-pressed: #760c5f;
+
+  --navy: #064660;
+  --navy-pressed: #0c2f3e;
+
+  --surface: #f4f1f3;
+  --bubble-her: #e9e9ea;
+  --bubble-you: #b84aa3;
+
+  --radius-lg: 22px;
+  --radius-md: 16px;
+
+  --maxw: 420px;
+}
