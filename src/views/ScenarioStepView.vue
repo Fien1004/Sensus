@@ -6,19 +6,24 @@
     <div class="chatbox">
       <div v-for="m in step.chat" :key="m.id">
         <div v-if="m.time" class="time">{{ m.time }}</div>
-        <div class="row" :class="m.side">
+
+        <div v-if="m.side === 'system'" class="systemRow">
+          <div class="systemText">{{ m.text }}</div>
+        </div>
+
+        <div v-else class="row" :class="m.side">
           <div class="bubble">{{ m.text }}</div>
         </div>
       </div>
     </div>
 
-    <h2 class="question">{{ step.question }}</h2>
+    <h2 v-if="step.question" class="question">{{ step.question }}</h2>
 
     <div class="options">
       <template v-for="opt in step.options" :key="opt.id">
         <button
-          class="navy"
-          :class="{ active: opt.type === 'text' && showCustom }"
+          :class="buttonClass(opt)"
+          :disabled="opt.disabled"
           @click="choose(opt)"
         >
           <span class="label">{{ opt.label }}</span>
@@ -78,6 +83,12 @@ const customNextStepId = ref(null)
 const customOptId = ref("anders")
 
 const canSubmitCustom = computed(() => customText.value.trim().length >= 2)
+
+function buttonClass(opt) {
+  const base = opt.variant === "primary" ? "primaryBtn" : "navy"
+  const active = opt.type === "text" && showCustom.value ? " active" : ""
+  return base + active
+}
 
 function choose(opt) {
   if (opt.type === "text") {
@@ -166,6 +177,17 @@ function stop() {
   margin: 10px 0;
 }
 
+.systemRow{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.systemText{
+  font-size: 12px;
+  color: var(--muted);
+}
+
 .row{
   display: flex;
   margin: 10px 0;
@@ -206,12 +228,12 @@ function stop() {
   gap: 12px;
 }
 
-.navy{
+.navy,
+.primaryBtn{
   width: 100%;
   border: 0;
   padding: 16px;
   border-radius: var(--radius-lg);
-  background: var(--navy);
   color: var(--snow);
   font-size: 16px;
   font-weight: 650;
@@ -222,13 +244,22 @@ function stop() {
   gap: 10px;
 }
 
+.navy{
+  background: var(--navy);
+}
 .navy.active{
   background: var(--navy-pressed);
 }
-
 .navy:disabled{
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.primaryBtn{
+  background: var(--primary);
+}
+.primaryBtn:active{
+  background: var(--primary-pressed);
 }
 
 .icon{

@@ -48,11 +48,77 @@ export const onlineGesprekVast = {
       ],
       question: "Kies wat jij zou doen.",
       options: [
-        { id: "stuur-nog", label: "Ik stuur nog een bericht om het gesprek gaande te houden", nextStepId: null },
-        { id: "stilte", label: "Ik laat even stilte vallen", nextStepId: null },
-        { id: "anders", label: "Eigen input", type: "text", nextStepId: null },
+        {
+          id: "stuur-nog",
+          label: "Ik stuur nog een bericht om het gesprek gaande te houden",
+          nextStepId: "gesprek-verder-duwen",
+        },
+        {
+          id: "stilte",
+          label: "Ik laat even stilte vallen",
+          nextStepId: "gesprek-stoppen",
+        },
+        {
+          id: "eigen-input",
+          label: "Eigen input",
+          type: "text",
+          nextStepId: "gesprek-verder-duwen",
+        },
       ],
+
       hint: "Beide keuzes leiden naar een andere situatie.",
     },
+    {
+      id: "gesprek-verder-duwen",
+      title: "Je duwt het gesprek verder",
+      body: "Je stuurt nog een bericht. Ze reageert helemaal niet.",
+      chat: [
+        {
+          id: "m1",
+          side: "you",
+          text: "Anders kunnen we een keertje samen niksen hé ;)",
+          time: "Gisteren 22:48",
+        },
+        {
+          id: "m2",
+          side: "system",
+          text: "Gelezen",
+          time: "",
+        },
+      ],
+      question: "",
+      options: [
+        {
+          id: "volgende",
+          label: "Volgende",
+          nextStepId: null,
+          variant: "primary",
+        },
+      ],
+    },
+    {
+      id: "gesprek-stoppen",
+      title: "Je stopt het gesprek",
+      body: "Je verontschuldigt je. Je voelt dat de ander niet echt mee is.",
+      chat: [
+        {
+          id: "m1",
+          side: "you",
+          text: "Ik merk dat je niet echt interesse hebt in dit gesprek, helemaal oké natuurlijk. Sorry voor de spam :p",
+          time: "Vandaag 18:36",
+        },
+      ],
+      question: "",
+      options: [
+        {
+          id: "volgende",
+          label: "Volgende",
+          nextStepId: null,
+          variant: "primary",
+        },
+      ],
+    },
+
+
   ],
 }
