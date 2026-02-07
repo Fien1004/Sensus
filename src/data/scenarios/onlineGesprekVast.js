@@ -19,6 +19,7 @@ export const onlineGesprekVast = {
         { id: "enthousiast", label: "Enthousiast", nextStepId: "eerste-signaal" },
         { id: "neutraal", label: "Neutraal", nextStepId: "eerste-signaal" },
         { id: "onzeker", label: "Onzeker", nextStepId: "eerste-signaal" },
+        { id: "anders", label: "Eigen input", type: "text", nextStepId: "eerste-signaal" },
       ],
     },
     {
@@ -34,6 +35,7 @@ export const onlineGesprekVast = {
         { id: "druk", label: "Ze is druk", nextStepId: "jouw-reactie" },
         { id: "niet-geinteresseerd", label: "Ze is niet echt geïnteresseerd", nextStepId: "jouw-reactie" },
         { id: "geen-idee", label: "Geen idee", nextStepId: "jouw-reactie" },
+        { id: "anders", label: "Eigen input", type: "text", nextStepId: "jouw-reactie" },
       ],
     },
     {
@@ -48,6 +50,7 @@ export const onlineGesprekVast = {
       options: [
         { id: "stuur-nog", label: "Ik stuur nog een bericht om het gesprek gaande te houden", nextStepId: null },
         { id: "stilte", label: "Ik laat even stilte vallen", nextStepId: null },
+        { id: "anders", label: "Eigen input", type: "text", nextStepId: null },
       ],
       hint: "Beide keuzes leiden naar een andere situatie.",
     },

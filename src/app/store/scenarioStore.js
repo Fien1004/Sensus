@@ -7,11 +7,26 @@ export const useScenarioStore = defineStore("scenario", {
   }),
   actions: {
     saveAnswer(key, value) {
-      this.answers[key] = value
+      // normale optie, je stuurt enkel de id string door
+      if (typeof value === "string") {
+        this.answers[key] = { type: "option", value }
+        return
+      }
+
+      // custom tekst, je stuurt { id, text } door
+      if (value && typeof value === "object") {
+        this.answers[key] = { type: "text", value }
+        return
+      }
+
+      // fallback
+      this.answers[key] = { type: "option", value: String(value) }
     },
+
     getScenario(id) {
       return getScenarioById(id)
     },
+
     getStep(scenarioId, stepId) {
       const scenario = getScenarioById(scenarioId)
       if (!scenario) return null
