@@ -145,21 +145,18 @@ function stop() {
 }
 
 .title{
-  font-size: 24px;
   margin: 10px 0;
 }
 
 .desc{
-  font-size: 16px;
-  color: var(--muted);
-  margin-bottom: 18px;
+  margin: 0 0 18px;
 }
 
 .chatbox{
   background: var(--surface);
   border-radius: var(--radius-lg);
   padding: 16px;
-  margin-bottom: 22px;
+  margin: 12px 0 22px;
 }
 
 .time{
@@ -187,21 +184,21 @@ function stop() {
   padding: 14px 16px;
   border-radius: 22px;
   font-size: 18px;
+  line-height: 1.25;
 }
 
 .row.you .bubble{
   background: var(--bubble-you);
-  color: white;
+  color: var(--snow);
 }
 
 .row.her .bubble{
   background: var(--bubble-her);
-  color: #111;
+  color: var(--charcoal);
 }
 
 .question{
-  font-size: 16px;
-  margin-bottom: 14px;
+  margin: 10px 0 14px;
 }
 
 .options{
@@ -215,7 +212,7 @@ function stop() {
   padding: 16px;
   border-radius: var(--radius-lg);
   background: var(--navy);
-  color: white;
+  color: var(--snow);
   font-size: 16px;
   font-weight: 650;
   cursor: pointer;
@@ -227,6 +224,11 @@ function stop() {
 
 .navy.active{
   background: var(--navy-pressed);
+}
+
+.navy:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .icon{
@@ -245,8 +247,8 @@ function stop() {
   border-radius: var(--radius-lg);
   border: 1px solid rgba(0,0,0,0.12);
   padding: 12px 14px;
-  font-size: 16px;
   resize: none;
+  background: var(--snow);
 }
 
 .submit{
@@ -265,10 +267,13 @@ function stop() {
   margin-top: 22px;
   padding: 16px;
   border-radius: var(--radius-lg);
-  background: #dbe8ef;
-  color: #0b3a4a;
+  background: var(--glass);
+  color: var(--teal);
   font-size: 16px;
   font-weight: 650;
   cursor: pointer;
+}
+.stop:active{
+  background: var(--dirty-window);
 }
 </style>

@@ -63,33 +63,29 @@ function goHome() {
   height: auto;
 }
 
+/* typography spacing only */
 .title{
-  font-size: 28px;
   margin: 0 0 12px;
   letter-spacing: -0.02em;
 }
 
 .desc{
-  font-size: 16px;
-  color: #454147;
   margin: 0 0 26px;
-  line-height: 1.45;
   max-width: 520px;
 }
 
 .note{
-  font-size: 12px;
-  color: var(--muted);
   margin: 0 0 22px;
 }
 
+/* buttons */
 .primary{
   width: 100%;
   border: 0;
   padding: 16px;
   border-radius: var(--radius-lg);
   background: var(--primary);
-  color: white;
+  color: var(--snow);
   font-size: 16px;
   font-weight: 650;
   cursor: pointer;
@@ -104,13 +100,13 @@ function goHome() {
   margin-top: 14px;
   padding: 16px;
   border-radius: var(--radius-lg);
-  background: #dbe8ef;
-  color: #0b3a4a;
+  background: var(--glass);
+  color: var(--teal);
   font-size: 16px;
   font-weight: 650;
   cursor: pointer;
 }
 .stop:active{
-  background: #cfe1ea;
+  background: var(--dirty-window);
 }
 </style>

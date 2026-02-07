@@ -1,17 +1,85 @@
 :root{
-  --bg: #ffffff;
-  --text: #1E1E1E;
-  --muted: #B9B4BB;
+  --primary: var(--fuchsia);
+  --primary-pressed: var(--adhd-pink);
 
-  --primary: #A50A7E;
-  --primary-pressed: #760c5f;
+  --navy: var(--teal);
+  --navy-pressed: var(--whale);
 
-  --navy: #064660;
-  --navy-pressed: #0c2f3e;
+  --bg: var(--snow);
+  --surface: var(--quartz);
 
-  --surface: #f4f1f3;
-  --bubble-her: #e9e9ea;
-  --bubble-you: #b84aa3;
+  --text: var(--charcoal);
+  --muted: var(--rock);
+
+  --bubble-you: var(--flower);
+  --bubble-her: var(--pearl);
+
+  --success-color: var(--success);
+  --error-color: var(--error);
+  --warning-color: var(--warning);
+
+  /* Pink / Fuchsia */
+  --fuchsia: #A50A7E;
+  --adhd-pink: #B13092;
+  --flower: #C354A7;
+  --pink: #D47BBF;
+  --flamingo: #E5A4D7;
+  --girly-pop: #EEBEE3;
+  --piglet: #F6D8EE;
+
+  /* Teal / Blue green */
+  --teal: #064660;
+  --whale: #1F4B63;
+  --wave: #3E6F88;
+  --puddle: #5F8FA6;
+  --rain: #8AB7CB;
+  --dirty-window: #AFCFDE;
+  --glass: #D2E7F0;
+
+  /* Neutrals */
+  --charcoal: #1E1E1E;
+  --asphalt: #454147;
+  --rock: #6C6570;
+  --mist: #B9B4BB;
+  --pearl: #E8E5E3;
+  --quartz: #F7F4F2;
+  --snow: #FFFFFF;
+
+  /* Red */
+  --error: #DB1B1B;
+  --average-red: #E13939;
+  --lovely: #E75757;
+  --soft-red: #ED7575;
+  --sweet-rose: #F39393;
+  --baby-pink: #F9B1B1;
+  --eva: #FFCFCF;
+
+  /* Green */
+  --success: #1FCD45;
+  --brazilianite: #3AD55C;
+  --emerald: #54DD72;
+  --harmony-green: #6FE589;
+  --fresh-mint: #8AED9F;
+  --cute-green: #A4F5B6;
+  --light-pastel-mint: #BFFDCC;
+
+  /* Orange */
+  --warning: #FF7300;
+  --beniukon: #FD8131;
+  --orangish: #FFE47;
+  --papaya: #FF9B5B;
+  --sunkissed: #FFA76F;
+  --baltic-amber: #FFB483;
+  --wispy-white: #FFC197;
+
+  /* Blue */
+  --information: #3B82F6;
+  --blueberry: #588CF7;
+  --heavenly-blue: #6E97F8;
+  --portage: #82A2FA;
+  --holiday: #94ADFB;
+  --lightning: #A4B8FB;
+  --cute-blue: #B4C4FC;
 
   --radius-lg: 22px;
   --radius-md: 16px;
