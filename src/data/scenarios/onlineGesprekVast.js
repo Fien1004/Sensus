@@ -6,6 +6,7 @@ export const onlineGesprekVast = {
   durationLabel: "Dit scenario duurt ongeveer 2–3 minuten.",
   introCta: "Start scenario",
   steps: [
+    // Start van het scenario
     {
       id: "eerste-contact",
       title: "Eerste contact",
@@ -23,7 +24,7 @@ export const onlineGesprekVast = {
         { id: "anders", label: "Eigen input", type: "text", nextStepId: "eerste-signaal" },
       ],
     },
-
+    // Eerste interpretatie
     {
       id: "eerste-signaal",
       title: "Eerste signaal van afstand",
@@ -45,7 +46,7 @@ export const onlineGesprekVast = {
         { id: "anders", label: "Eigen input", type: "text", nextStepId: "jouw-reactie" },
       ],
     },
-
+    // Keuzemoment. Split in 2 paden
     {
       id: "jouw-reactie",
       title: "Jouw eerste reactie",
@@ -80,7 +81,7 @@ export const onlineGesprekVast = {
       ],
       hint: "Beide keuzes leiden naar een andere situatie.",
     },
-
+    // Pad A. Gesprek verder duwen
     {
       id: "gesprek-verder-duwen",
       title: "Je duwt het gesprek verder",
@@ -102,7 +103,7 @@ export const onlineGesprekVast = {
         { id: "eigen-input", label: "Eigen input", type: "text", nextStepId: "jouw-actie" },
       ],
     },
-
+     
     {
       id: "jouw-actie",
       title: "Jouw actie",
@@ -147,7 +148,7 @@ export const onlineGesprekVast = {
         },
       ],
     },
-
+    // Pad B. Gesprek stoppen
     {
       id: "gesprek-stoppen",
       title: "Je stopt het gesprek",
