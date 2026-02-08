@@ -108,6 +108,14 @@ function choose(opt) {
     return
   }
 
+  if (opt.nextStepId === "intro") {
+    router.push({
+      name: "scenario-intro",
+      params: { scenarioId: route.params.scenarioId },
+    })
+    return
+  }
+
   router.push({
     name: "scenario-step",
     params: {
